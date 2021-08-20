@@ -1,0 +1,63 @@
+<div style="width: 400px; margin: auto;">
+    
+    <div *ngIf="newCustomer">
+        
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          required
+          [(ngModel)]="newCustomer.id"
+          name="id"
+        />
+      </div>
+
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="newCustomer.name"
+            name="name"
+          />
+        </div>
+
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            required
+            [(ngModel)]="newCustomer.address"
+            name="address"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input
+            type="text"
+            class="form-control"
+            id="website"
+            required
+            [(ngModel)]="newCustomer.website"
+            name="website"
+          />
+        </div>
+        <div class="but">
+            <button (click)="saveCustomer()" id='wer'>Submit</button>
+        </div>
+          
+      
+          <div *ngIf="submitted">
+            <h4>You submitted successfully!</h4>
+            <button class="btn btn-success" (click)="new_Customer()">Add</button>
+          </div>
+        </div>
+      
